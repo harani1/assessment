@@ -1,0 +1,111 @@
+set-A
+
+
+(1) using staticdemo
+  
+  
+#include<stdio.h>
+void staticdemo()
+{
+static int a=4;
+a=a+4; 
+printf("%d\n",a);
+}
+int main()
+{
+for(int i=0;i<4;i++)
+{
+staticdemo();
+}
+return 0;
+}
+
+
+(2)scope of the variable
+
+(local variable declaration)
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c; //local variable declaration the scope of the variable will continue to the end of the program
+    a=10,b=20,c;
+    c=a+b;
+    printf("%d",c);
+}
+
+(global declaration)
+
+#include<stdio.h>
+int a=20 ;   //here g is declred globally ,value exists for some time
+int main()
+{
+    int a=30;   //here g is declared locally ,value exists to the end of the program
+    printf("%d",g);
+    return 0;
+}
+
+(3)using structures employee details
+
+#include<stdio.h>
+#include <string.h>
+struct emp 
+{
+char id[10];
+char name[20];
+char native[20];
+};
+int main()
+{
+struct emp emp1[3],emp2[3],emp3[3]; 
+strcpy(emp1[3].id,"2706");
+strcpy(emp1[3].name,"harani");
+strcpy(emp1[3].native,"kadapa");
+strcpy(emp2[3].id,"2345");
+strcpy(emp2[3].name,"honey");
+strcpy(emp2[3].native,"kurnool");
+strcpy(emp3[3].id,"4567");
+strcpy(emp3[3].name,"hon");
+strcpy(emp3[3].native,"tirupathi");
+printf("%s\n",emp1[3].id);
+printf("%s\n",emp1[3].name);
+printf("%s\n",emp1[3].native);
+printf("%s\n",emp2[3].id);
+printf("%s\n",emp2[3].name);
+printf("%s\n",emp2[3].native);
+printf("%s\n",emp3[3].id);
+printf("%s\n",emp3[3].name);
+printf("%s\n",emp3[3].native);
+return 0;
+}
+
+
+(4) to create and delete question 5
+
+
+#include <stdio.h>
+#include <string.h>
+struct emp
+{
+char id[10];
+char name[20];
+};
+int main()
+{
+struct emp emps[3]; 
+printf("Enter 3 emps id and name");
+for (int i = 0; i < 3; i++) 
+{
+scanf("%s",emps[i].id);
+scanf("%s",emps[i].name);
+}
+for (int i = 0; i < 3; i++) 
+{
+printf("%s\t",emps[i].id);
+printf("%s\n",emps[i].name);
+}
+return 0;
+}
+
+
+
